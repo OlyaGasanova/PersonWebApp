@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="Resources/css/intro.css">
+        <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+        <script src="Resources/js/intro.js"></script>
+        <script src="Resources/js/updateData.js"></script>
+        <script src="Resources/js/personRequest.js"></script>
+        <script src="Resources/js/handlers.js"></script>
+    </head>
+    <body>
+        <div id="intro-container" class="noselect">
+            <div class="default-container">
+                
+
+                <div id="check-connectoins-container">
+                    <div class="check-button-container">
+                        <input type="button" name="apiConnection" value="Проверка API" onclick="checkConnection('Api')" class="button">
+                        <div id="ApiConnectionIndicator" class="circle off"></div>
+                        <span id="ApiConnectionMessage" class="check-message-span"></span>
+                    </div>
+                    <div class="check-button-container">
+                        <input type="button" name="sqlConnection" value="Проверка SQL" onclick="checkConnection('Sql')" class="button">
+                        <div id="SqlConnectionIndicator" class="circle off"></div>
+                        <span id="SqlConnectionMessage" class="check-message-span"></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="task-result-container" class="default-container">
+            <script> getNames(); getCurrency("RUB");</script>
+            <select onchange="CaseChanged(this.selectedIndex)">
+                <option value="case1">Пункт 1</option>
+                <option value="case2">Пункт 2</option>
+                <option value="case3">Пункт 3</option>
+            </select>
+            <select onchange="CurrencyChanged(this.value)">
+                <option value="RUB">Рубли</option>
+                <option value="USD">Доллары</option>
+                <option value="EUR">Евро</option>
+                <option value="BYN">Белорусские Рубли</option>
+                <option value="JPY">Иены</option>
+                <option value="UAH">Гривны</option>
+            </select>
+            <br>
+            <br>
+            <div id="ConnectionIndicator" class="circle off"></div>
+
+            <div id="AllOperations"></div>
+
+            <div style="display: table">
+                <div id="AllNames" onclick="onTableClic(event)"></div>
+                <div id="SingleOperations"></div>
+            </div>
+        </div>
+
+    </body>
+</html>
+
+<script> 
+  
+    
+</script>
